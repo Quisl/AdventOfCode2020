@@ -1,12 +1,12 @@
 numbers = open("numbers.txt","r").read().split("\n")
 
-def day1():
+def part1():
   for i in numbers:
     for j in numbers[numbers.index(i):]:
       if int(i)+int(j) == 2020:
         return (int(i)*int(j))
 
-def day2():
+def part2():
   for i in numbers:
     for j in numbers[numbers.index(i):]:
       for x in numbers[numbers.index(j):]:
@@ -14,5 +14,5 @@ def day2():
           return (int(i)*int(j)*int(x))
 
 
-print(str(day1()))
-print(str(day2()))
+print(str(part1()))
+print(str(part2()))
