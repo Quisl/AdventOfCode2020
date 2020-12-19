@@ -1,8 +1,3 @@
-import sys
-
-sys.setrecursionlimit(9999)
-
-
 def readFile():
     numberlist = []
     with open("input.txt", "r") as f:
@@ -21,9 +16,7 @@ def isValid(number, previous):
     for i in previous:
         for j in previous[previous.index(i) :]:
             if i + j == number:
-                # print(f"{number} is valid: {i}+{j}")
                 return True
-    # print(f"{number} is not valid")
     return False
 
 
@@ -40,18 +33,6 @@ def findWeakness(invalid, numbers, start, end):
                 minimum = min(numbers[start:end])
                 maximum = max(numbers[start:end])
                 return minimum + maximum
-
-
-#    if sum(numbers[start:end]) > invalid:
-#        start = start + 1
-#        end = start + 1
-#    elif sum(numbers[start:end]) < invalid:
-#        end = end + 1
-#    elif sum(numbers[start:end]) == invalid:
-#        result = start + end
-#    if result == None:
-#        result = findWeakness(invalid, numbers, start, end, result)
-#    return result
 
 
 def part2():
