@@ -28,8 +28,6 @@ def findWeakness(invalid, numbers, start, end):
             elif sum(numbers[start:end]) < invalid:
                 continue
             elif sum(numbers[start:end]) == invalid:
-                print(start)
-                print(end)
                 minimum = min(numbers[start:end])
                 maximum = max(numbers[start:end])
                 return minimum + maximum
