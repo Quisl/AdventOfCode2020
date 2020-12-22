@@ -80,7 +80,7 @@ def part2():
     busses = list(map(xto0, busses))
     busses = list(map(int, busses))
     timestamp = findBusSequence(busses)
-    return str(timestamp)
+    return str(int(timestamp))
 
 
 print(part2())
