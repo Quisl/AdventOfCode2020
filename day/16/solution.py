@@ -70,12 +70,10 @@ def guessRow(tickets, fields):
             else:
                 columnvalues[i] = []
                 columnvalues[i].append(value)
-    #    print(columnvalues)
     for key in fields:
         for column in columnvalues:
             possible = checkValuesInRanges(columnvalues[column], fields[key])
             if possible:
-                # print(f"{key} can be {column}!")
                 if key in results:
                     results[key].append(column)
                 else:
@@ -87,7 +85,6 @@ def guessRow(tickets, fields):
 
 def part2():
     fields, yourticket, nearbytickets = parseFile()
-    # print(nearbytickets)
     validtickets = []
     validtickets.append(yourticket)
     for ticket in nearbytickets:
