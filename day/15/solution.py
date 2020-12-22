@@ -34,7 +34,7 @@ def part1():
     return saynumber
 
 
-def part1():
+def part2():
     numbers = parseFile()
     lasttimes = {}
 
